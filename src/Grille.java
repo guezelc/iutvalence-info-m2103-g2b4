@@ -16,53 +16,41 @@ public class Grille
 	 * grille de puissance 4
 	 */
 
-	private int grille [][];
-	/**
-	 * nombre de pions dans la colonnes
-	 */
-	private int nombredepions;
+	private Case[][] cases;
+
+	private int[] sommet;
 	
 	/**
 	 * definition du constructeur grille qui creer le tableau de jeu
 	 */
 	public Grille() 
 	{
+		/**
+		 * Construit une Grille Vide 
+		 */
 		
-		this.setGrille(new int [NOMBRE_DE_lIGNES][NOMBRE_DE_COLONNES]);
-		for (int i = 0; i<NOMBRE_DE_lIGNES;i++)
+		this.cases=new Case[NOMBRE_DE_lIGNES][NOMBRE_DE_COLONNES];
+		for(int j= 0 ; j < NOMBRE_DE_COLONNES;j++)
 		{
-			for(int j= 0 ; j < NOMBRE_DE_COLONNES;j++)
+			sommet[j]=0;
+			for (int i = 0; i<NOMBRE_DE_lIGNES;i++)
 			{
-				this.grille[i][j]=0;
+				this.cases[i][j]=null;
+								
 			}
 			
 		}
 		
-	}
-
-	/** 
-	 * methode qui permet d'avoir la grille
-	 * @return la grille du puissance 4
-	 */
-	public int[][] getGrille() {
-		return grille;
-	}
-
-	/** 
-	 * permet de modifier la grille du puissance 4
-	 * @param grille
-	 */
-	public void setGrille(int grille[][]) {
-		this.grille = grille;
-	}
 	
-	//public int sommetColonne(int numcolonne);
+	}
+	/** 
+	 * Obtenir le nombre de pion dans une colonne
+	 * @param numcolonne choisis un numéro de colonne
+	 * @return le nombre de pion dans cette colonne 
+	 */
+	public int getSommet(int numcolonne)
 	{
-		
+		return sommet[numcolonne];
 	}
-	
-	// public void AjouterPion(int numcolonne,Couleur c)
-	// {
-	//	 this.grille[numcolonne][sommetColonne(this.numcolonne)]
-	// }
+
 }
