@@ -8,7 +8,13 @@ public class Puissance4Game
 	 **/
 		public Puissance4Game() 
 	{
-			grille = new Grille();
+			
+	}
+
+	public void play() 
+	{
+		grille = new Grille();
+		
 	}
 
 }
