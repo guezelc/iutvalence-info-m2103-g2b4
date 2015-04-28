@@ -1,6 +1,6 @@
 // TODO finish writing comment
 /**
- * classe qui cree
+ * class who define a game of puissance4
  * @author guezelc
  * 
  */
@@ -8,6 +8,9 @@ public class Puissance4Game
 {
 	// TODO write comment
 	// TODO rename field
+	/**
+	 * create a field grille type of Grille
+	 */
 	private Grille grille;
 
 	// TODO fix comment
