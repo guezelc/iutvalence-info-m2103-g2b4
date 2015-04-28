@@ -1,7 +1,14 @@
 
-public class Pions 
+/**
+ * @author guezelc
+ * pions de differentes couleurs pour chaque joueur
+ */
+public class Pions
 {
-	 Couleur couleur;
+	 /**
+	 * couleur du pions
+	 */
+	Couleur couleur;
 	
 	 
 	 /**

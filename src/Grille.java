@@ -1,4 +1,8 @@
 
+/**
+ * @author guezelc
+ * creer une grille de puissance 4
+ */
 public class Grille 
 {
 	/**
@@ -16,8 +20,11 @@ public class Grille
 	 * grille de puissance 4
 	 */
 
-	private Case[][] cases;
+	private Case[][] grille;
 
+	/**
+	 * le sommet d'une colonne 
+	 */
 	private int[] sommet;
 	
 	/**
@@ -29,13 +36,13 @@ public class Grille
 		 * Construit une Grille Vide 
 		 */
 		
-		this.cases=new Case[NOMBRE_DE_lIGNES][NOMBRE_DE_COLONNES];
+		this.grille=new Case[NOMBRE_DE_lIGNES][NOMBRE_DE_COLONNES];
 		for(int j= 0 ; j < NOMBRE_DE_COLONNES;j++)
 		{
-			sommet[j]=0;
+			this.sommet[j]=0;
 			for (int i = 0; i<NOMBRE_DE_lIGNES;i++)
 			{
-				this.cases[i][j]=null;
+				this.grille[i][j]=null;
 								
 			}
 			
@@ -50,7 +57,7 @@ public class Grille
 	 */
 	public int getSommet(int numcolonne)
 	{
-		return sommet[numcolonne];
+		return this.sommet[numcolonne];
 	}
 
 }
