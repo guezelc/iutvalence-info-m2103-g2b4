@@ -43,14 +43,14 @@ public class Grid
 	 */
 	public Grid() 
 	{
-		
+		this.columnTopIndex=new int[NUMBER_OF_COLUMNS];
 		this.cells=new Cell[NUMBER_OF_LINES][NUMBER_OF_COLUMNS];
-		for(int j= 0 ; j < NUMBER_OF_COLUMNS;j++)
+		for(int numcolumn= 0 ; numcolumn < NUMBER_OF_COLUMNS;numcolumn++)
 		{
-			this.columnTopIndex[j]=0;
-			for (int i = 0; i<NUMBER_OF_LINES;i++)
+			this.columnTopIndex[numcolumn]=0;
+			for (int numline = 0; numline<NUMBER_OF_LINES;numline++)
 			{
-				this.cells[i][j]=null;
+				this.cells[numline][numcolumn]=null;
 								
 			}
 			
@@ -70,6 +70,26 @@ public class Grid
 		return this.columnTopIndex[numcolumn];
 	}
 
-	// TODO override toString
+	// TODO override toString DONE
+	// TODO write comment 
+	
+	public String toString()
+	{
+		String gridAsciiArt = "";
+
+		for (int numberOfLine = 0; numberOfLine < NUMBER_OF_LINES; numberOfLine++)
+		{
+			for (int numOfColumn = 0; numOfColumn < NUMBER_OF_COLUMNS; numOfColumn++)
+				gridAsciiArt += "-";
+			gridAsciiArt += "\n";
+		}
+
+		return gridAsciiArt;
+								
+			
+			
+		
+		
+	}
 	
 }

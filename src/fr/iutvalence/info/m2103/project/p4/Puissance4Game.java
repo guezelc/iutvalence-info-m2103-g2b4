@@ -27,8 +27,10 @@ public class Puissance4Game {
 	/**
 	 * Create a new grid of Puissance4
 	 */
-	public void play() {
-
+	// TODO  do method play
+	public void play() 
+	{
+		
 	}
 
 }
