@@ -80,8 +80,8 @@ public class Grid
 		for (int numberOfLine = 0; numberOfLine < NUMBER_OF_LINES; numberOfLine++)
 		{
 			for (int numOfColumn = 0; numOfColumn < NUMBER_OF_COLUMNS; numOfColumn++)
-				gridAsciiArt += "-";
-			gridAsciiArt += "\n";
+				gridAsciiArt += "|_";
+			gridAsciiArt += "|\n";
 		}
 
 		return gridAsciiArt;

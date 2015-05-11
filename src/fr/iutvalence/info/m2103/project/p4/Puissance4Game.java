@@ -30,6 +30,7 @@ public class Puissance4Game {
 	// TODO  do method play
 	public void play() 
 	{
+		System.out.println(new Grid());
 		
 	}
 
