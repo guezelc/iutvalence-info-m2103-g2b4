@@ -23,8 +23,8 @@ public enum Cell
 	
 	public String toString()
 	{
-		if (this == RED) return "o";
-		else if (this == YELLOW) return "x";
-		else return "_";
+		if (this == RED) return "|o";
+		else if (this == YELLOW) return "|x";
+		else return "|_";
 	}
 }

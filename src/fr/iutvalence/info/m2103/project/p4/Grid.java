@@ -1,7 +1,7 @@
 package fr.iutvalence.info.m2103.project.p4;
 // TODO rename class DONE 
 /**
- *  creer une grille de puissance 4
+ *  create a Puissance4 grid
  * @author guezelc
  *
  */
@@ -50,7 +50,7 @@ public class Grid
 			this.columnTopIndex[numcolumn]=0;
 			for (int numline = 0; numline<NUMBER_OF_LINES;numline++)
 			{
-				this.cells[numline][numcolumn]=null;
+				this.cells[numline][numcolumn]=Cell.EMPTY;
 								
 			}
 			
@@ -80,7 +80,7 @@ public class Grid
 		for (int numberOfLine = 0; numberOfLine < NUMBER_OF_LINES; numberOfLine++)
 		{
 			for (int numOfColumn = 0; numOfColumn < NUMBER_OF_COLUMNS; numOfColumn++)
-				gridAsciiArt += "|_";
+				gridAsciiArt += this.cells[numberOfLine][numOfColumn].toString();
 			gridAsciiArt += "|\n";
 		}
 
