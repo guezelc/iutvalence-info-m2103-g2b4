@@ -26,7 +26,7 @@ public class Grid
 	/** 
 	 * Cells of a Grid
 	 */
-	private Cell[][] cells;
+	static Cell[][] cells;
 
 	// TODO rename field DONE
 	// TODO fix comment DONE
@@ -34,7 +34,7 @@ public class Grid
 	/**
 	 * The index of each top column
 	 */
-	private int[] columnTopIndex;
+	private static int[] columnTopIndex;
 	
 	// TODO rename field DONE
 	// TODO fix comment DONE
@@ -47,7 +47,7 @@ public class Grid
 		this.cells=new Cell[NUMBER_OF_LINES][NUMBER_OF_COLUMNS];
 		for(int numcolumn= 0 ; numcolumn < NUMBER_OF_COLUMNS;numcolumn++)
 		{
-			this.columnTopIndex[numcolumn]=0;
+			this.setTopIndex(numcolumn, NUMBER_OF_LINES-1);
 			for (int numline = 0; numline<NUMBER_OF_LINES;numline++)
 			{
 				this.cells[numline][numcolumn]=Cell.EMPTY;
@@ -65,9 +65,14 @@ public class Grid
 	 * @param numcolumn choose a number of column
 	 * @return the number of pawn in this column
 	 */
-	public int getTopIndex(int numcolumn)
+	public static int getTopIndex(int numcolumn)
 	{
-		return this.columnTopIndex[numcolumn];
+		return Grid.columnTopIndex[numcolumn];
+	}
+	
+	public static void setTopIndex(int numcolumn, int top)
+	{
+		Grid.columnTopIndex[numcolumn]=top;
 	}
 
 	// TODO override toString DONE

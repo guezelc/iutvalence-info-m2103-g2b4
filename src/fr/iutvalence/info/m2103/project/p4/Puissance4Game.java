@@ -37,14 +37,20 @@ public class Puissance4Game {
 	public void play() 
 	{
 		System.out.println(new Grid());
+		PutPawn(6,Cell.RED);
+		PutPawn(6,Cell.RED);
+		PutPawn(6,Cell.RED);
+		PutPawn(6,Cell.RED);
+		System.out.println(this.grid);
 		
 	}
 	/**
 	 * @param player : The player who put the pawn
 	 */
-	public void PutPawn(Player player) 
+	public void PutPawn(int numcol,Cell color ) 
 	{
 			
-		this.cells[Grid.getTopIndex(Player.ChooseColumn(numcol))][Player.ChooseColumn(numcol)]=player.color;
+		this.grid.cells[Grid.getTopIndex(numcol)][numcol]=color;
+		Grid.setTopIndex(numcol, Grid.getTopIndex(numcol)-1);
 	}
 }

@@ -10,7 +10,7 @@ public class Player
 	/**
 	 * color of the player
 	 */
-	public static Cell color;
+	private static Cell color;
 	private static Cell[][] cells;
 	
 	/**
@@ -19,16 +19,16 @@ public class Player
 	 */
 	public Player(Cell colorOfPlayer) 
 	{
-		this.color= colorOfPlayer;
+		this.setColor(colorOfPlayer);
+	}
+
+	public static Cell getColor() {
+		return color;
+	}
+
+	public static void setColor(Cell color) {
+		Player.color = color;
 	}
 	
-	/**
-	 * select the top of column and put a pawn when it's found
-	 * @param numcol
-	 * @return numcol: where the player want to put the pawn
-	 */
-	public static int ChooseColumn (int numcol)
-	{
-		return numcol;
-	}
+	
 }
