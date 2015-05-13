@@ -1,4 +1,5 @@
 package fr.iutvalence.info.m2103.project.p4;
+import java.util.Scanner;
 /**
  * define the class Player 
  * @author costel
@@ -12,6 +13,7 @@ public class Player
 	 */
 	private static Cell color;
 	private static Cell[][] cells;
+	private static Scanner sc;
 	
 	/**
 	 * define a player with his color
@@ -30,5 +32,11 @@ public class Player
 		Player.color = color;
 	}
 	
+	public static int chooseColumn ()
+	{
+		sc = new Scanner(System.in);
+		int str = sc.nextInt();
+		return str;
+	}
 	
 }

@@ -33,24 +33,27 @@ public class Puissance4Game {
 	/**
 	 * Create a new grid of Puissance4
 	 */
-	// TODO  do method play
+	// TODO  do method play DONE
 	public void play() 
 	{
 		System.out.println(new Grid());
-		PutPawn(6,Cell.RED);
-		PutPawn(6,Cell.RED);
-		PutPawn(6,Cell.RED);
-		PutPawn(6,Cell.RED);
-		System.out.println(this.grid);
+		for (int nbrcoup=0;nbrcoup<this.grid.NUMBER_OF_COLUMNS*this.grid.NUMBER_OF_LINES;nbrcoup++)
+		{
+			PutPawn(Cell.RED);
+			System.out.println(this.grid);
+			PutPawn(Cell.YELLOW);
+			System.out.println(this.grid);
+		}
+		
 		
 	}
 	/**
 	 * @param player : The player who put the pawn
 	 */
-	public void PutPawn(int numcol,Cell color ) 
+	public void PutPawn(Cell color ) 
 	{
-			
-		this.grid.cells[Grid.getTopIndex(numcol)][numcol]=color;
-		Grid.setTopIndex(numcol, Grid.getTopIndex(numcol)-1);
+		int col= Player.chooseColumn();	
+		this.grid.cells[Grid.getTopIndex(col)][col]=color;
+		Grid.setTopIndex(col, Grid.getTopIndex(col)-1);
 	}
 }
