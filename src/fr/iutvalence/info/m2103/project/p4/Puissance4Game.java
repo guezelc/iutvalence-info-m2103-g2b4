@@ -37,6 +37,7 @@ public class Puissance4Game {
 	public void play() 
 	{
 		System.out.println(new Grid());
+		//while(Pawnalign=false && nbrcoup<this.grid.NUMBER_OF_COLUMNS*this.grid.NUMBER_OF_LINES)
 		for (int nbrcoup=0;nbrcoup<this.grid.NUMBER_OF_COLUMNS*this.grid.NUMBER_OF_LINES;nbrcoup++)
 		{
 			PutPawn(Cell.RED);
