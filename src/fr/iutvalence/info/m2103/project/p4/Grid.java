@@ -34,7 +34,7 @@ public class Grid
 	/**
 	 * The index of each top column
 	 */
-	private static int[] columnTopIndex;
+	static int[] columnTopIndex;
 	
 	// TODO rename field DONE
 	// TODO fix comment DONE

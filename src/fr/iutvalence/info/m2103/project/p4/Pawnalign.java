@@ -1,4 +1,4 @@
-package fr.iutvalence.info.m2103.project.p4;
+/*package fr.iutvalence.info.m2103.project.p4;
 
 public class Pawnalign 
 {
@@ -17,3 +17,4 @@ public class Pawnalign
 	    }
 
 }
+*/
