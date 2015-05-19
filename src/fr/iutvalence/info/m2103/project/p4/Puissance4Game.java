@@ -35,15 +35,25 @@ public class Puissance4Game {
 	 */
 	// TODO  do method play DONE
 	public void play() 
-	{
+	{	
+
 		System.out.println(new Grid());
-		//while(Pawnalign=false && nbrcoup<this.grid.NUMBER_OF_COLUMNS*this.grid.NUMBER_OF_LINES)
+
 		for (int nbrcoup=0;nbrcoup<this.grid.NUMBER_OF_COLUMNS*this.grid.NUMBER_OF_LINES;nbrcoup++)
 		{
+			
 			PutPawn(Cell.RED);
 			System.out.println(this.grid);
+			if (Pawnalign.Search4Align())
+			{
+				System.out.println("Red win !");
+			}
 			PutPawn(Cell.YELLOW);
 			System.out.println(this.grid);
+			if (Pawnalign.Search4Align())
+			{
+				System.out.println("Yellow win !");				
+			}
 		}
 		
 		

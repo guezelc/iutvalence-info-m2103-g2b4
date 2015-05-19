@@ -8,7 +8,7 @@ public class Pawnalign
 		
 	}
 	
-	public boolean FourPawnalign(int depCol, int depLigne, int moveCol, int moveLig) 
+	private static boolean FourPawnalign(int depCol, int depLigne, int moveCol, int moveLig) 
 	{
 		int compteur = 0;
 		int currrentCol = depCol;
@@ -27,7 +27,7 @@ public class Pawnalign
 	    	{
 	    		compteur++;
 	    	}
-	    	if (compteur==4 && colorSearch==Grid.cells[currentLig][currrentCol])
+	    	if (compteur==4 && colorSearch != Cell.EMPTY)
 	    	{
 	    		return true;
 	    	}
@@ -38,7 +38,7 @@ public class Pawnalign
 	    return false;
 	}
 	
-	public boolean Search4Align()
+	public static boolean Search4Align()
 	{
 		for (int lig=0 ; lig<Grid.NUMBER_OF_LINES ; lig++)
 		{
