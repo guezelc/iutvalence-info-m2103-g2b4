@@ -74,4 +74,18 @@ public class Pawnalign
 		
 		return false;
 	}
+	
+	public static void Win(Cell color)
+	{
+		if (color==Cell.RED)
+		{
+			System.out.println("Red win !");
+			System.out.println(new Grid());
+		}
+		if (color==Cell.YELLOW)
+		{
+			System.out.println("Yellow win !");
+			System.out.println(new Grid());
+		}
+	}
 }

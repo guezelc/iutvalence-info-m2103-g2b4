@@ -46,13 +46,15 @@ public class Puissance4Game {
 			System.out.println(this.grid);
 			if (Pawnalign.Search4Align())
 			{
-				System.out.println("Red win !");
+				Pawnalign.Win(Cell.RED);
+				nbrcoup=0;
 			}
 			PutPawn(Cell.YELLOW);
 			System.out.println(this.grid);
 			if (Pawnalign.Search4Align())
 			{
-				System.out.println("Yellow win !");				
+				Pawnalign.Win(Cell.YELLOW);
+				nbrcoup=0;
 			}
 		}
 		
