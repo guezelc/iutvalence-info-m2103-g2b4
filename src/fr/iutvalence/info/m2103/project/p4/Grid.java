@@ -86,7 +86,10 @@ public class Grid
 		{
 			for (int numOfColumn = 0; numOfColumn < NUMBER_OF_COLUMNS; numOfColumn++)
 				gridAsciiArt += this.cells[numberOfLine][numOfColumn].toString();
-			gridAsciiArt += "|\n";
+			gridAsciiArt += "¦\n+---";
+				for (int numOflig = 0; numOflig < NUMBER_OF_LINES ; numOflig++)
+					gridAsciiArt +="+---";
+				gridAsciiArt += "+\n";
 		}
 
 		return gridAsciiArt;
