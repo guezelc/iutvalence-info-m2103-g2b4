@@ -38,12 +38,14 @@ public class Puissance4Game {
 	{	
 
 		System.out.println(new Grid());
+		System.out.println("The Red begin");
 
 		for (int nbrcoup=0;nbrcoup<this.grid.NUMBER_OF_COLUMNS*this.grid.NUMBER_OF_LINES;nbrcoup++)
 		{
 			
 			PutPawn(Cell.RED);
 			System.out.println(this.grid);
+			
 			if (Pawnalign.Search4Align())
 			{
 				Pawnalign.Win(Cell.RED);

@@ -81,11 +81,13 @@ public class Pawnalign
 		{
 			System.out.println("Red win !");
 			System.out.println(new Grid());
+			System.out.println("The Yellow begin");
 		}
 		if (color==Cell.YELLOW)
 		{
 			System.out.println("Yellow win !");
 			System.out.println(new Grid());
+			System.out.println("The Red begin");
 		}
 	}
 }
