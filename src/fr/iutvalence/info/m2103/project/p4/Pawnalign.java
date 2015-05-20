@@ -64,14 +64,14 @@ public class Pawnalign
 			}
 		}
 		
-		for (int col=0 ; col<Grid.NUMBER_OF_COLUMNS ; col++)
+		for (int col=6 ; col>=0 ; col--)
 		{
 			if (FourPawnalign(col, 0, -1, 1)) 
 			{
 		        return true;
 			}
+			
 		}
-		
 		return false;
 	}
 	

@@ -36,9 +36,9 @@ public class Player
 	{
 		sc = new Scanner(System.in);
 		int str = sc.nextInt();
-		while (str>=Grid.NUMBER_OF_COLUMNS ||Grid.columnTopIndex[str]<=-1 )
+		while (str>=Grid.NUMBER_OF_COLUMNS ||Grid.columnTopIndex[str]<=-1 ||str<=-1 )
 		{
-			if (str>=Grid.NUMBER_OF_COLUMNS)
+			if (str>=Grid.NUMBER_OF_COLUMNS||str<=-1 )
 			{
 				System.out.println("Invalid column number : replay !");
 				sc = new Scanner(System.in);
