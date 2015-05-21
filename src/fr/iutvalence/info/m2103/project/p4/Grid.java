@@ -70,6 +70,11 @@ public class Grid
 		return Grid.columnTopIndex[numcolumn];
 	}
 	
+	/**
+	 * The method who set the indice of the top index  , choose by his number of column
+	 * @param numcolumn
+	 * @param top
+	 */
 	public static void setTopIndex(int numcolumn, int top)
 	{
 		Grid.columnTopIndex[numcolumn]=top;

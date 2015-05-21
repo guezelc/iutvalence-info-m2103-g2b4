@@ -69,7 +69,7 @@ public class Puissance4Game {
 	public void PutPawn(Cell color ) 
 	{
 		int col= Player.chooseColumn();	
-		this.grid.getCells()[Grid.getTopIndex(col)][col]=color;
+		this.grid.cells[Grid.getTopIndex(col)][col]=color;
 		Grid.setTopIndex(col, Grid.getTopIndex(col)-1);
 	}
 }

@@ -23,15 +23,27 @@ public class Player
 	{
 		this.setColor(colorOfPlayer);
 	}
-
+	
+	/**
+	 * get the color of the Cell
+	 * @return : the color of the Cell
+	 */
 	public static Cell getColor() {
 		return color;
 	}
-
+	
+	/**
+	 * Set the color in the param
+	 * @param color : the color who's useful
+	 */
 	public static void setColor(Cell color) {
 		Player.color = color;
 	}
 	
+	/**
+	 * The method who make choose a number of column with a scan of the keyboard
+	 * @return : an int between 0 and 6 who correspond at a number of column valid
+	 */
 	public static int chooseColumn ()
 	{
 		sc = new Scanner(System.in);

@@ -28,14 +28,14 @@ public class Pawnalign
 		int count = 0;
 		int currrentCol = initCol;
 	    int currentLig = initLine;
-		Cell colorSearch = Grid.getCells()[currentLig][currrentCol];
+		Cell colorSearch = Grid.cells[currentLig][currrentCol];
 
 	    
 	    while(currrentCol>=0 && currrentCol<Grid.NUMBER_OF_COLUMNS && currentLig>=0 && currentLig<Grid.NUMBER_OF_LINES)
 	    {
-	    	if (Grid.getCells()[currentLig][currrentCol] !=colorSearch) 
+	    	if (Grid.cells[currentLig][currrentCol] !=colorSearch) 
 	    	{
-	    		colorSearch = Grid.getCells()[currentLig][currrentCol];
+	    		colorSearch = Grid.cells[currentLig][currrentCol];
 	    		count=1;
 	    	}
 	    	else
