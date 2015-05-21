@@ -7,7 +7,7 @@ package fr.iutvalence.info.m2103.project.p4;
  * @author guezelc
  * 
  */
-public class Puissance4Game {
+public class Power4Game {
 	// TODO write comment DONE
 	// TODO rename field DONE
 	/**
@@ -23,7 +23,7 @@ public class Puissance4Game {
 	/**
 	 * Create a game of Puissance4
 	 **/
-	public Puissance4Game() {
+	public Power4Game() {
 		this.grid = new Grid();
 		Player player1=new Player(Cell.RED);
 		Player player2=new Player(Cell.YELLOW);
