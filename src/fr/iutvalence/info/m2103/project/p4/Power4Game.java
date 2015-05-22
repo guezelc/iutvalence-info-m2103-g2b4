@@ -13,7 +13,7 @@ public class Power4Game {
 	/**
 	 * create a field grid type of Grille
 	 */
-	private Grid grid;
+	private static Grid grid;
 	/**
 	 * create a field cells type of Cell
 	 */
@@ -45,6 +45,7 @@ public class Power4Game {
 			
 			PutPawn(Cell.RED);
 			
+			
 			if (Pawnalign.Search4Align())
 			{
 				Pawnalign.Win(Cell.RED);
@@ -65,11 +66,11 @@ public class Power4Game {
 	 * The method who allow a player, choose by his color, to ut a pawn
 	 * @param player : The player who put the pawn
 	 */
-	public void PutPawn(Cell color ) 
+	public static void PutPawn(Cell color ) 
 	{
 		int col= Player.chooseColumn();	
-		this.grid.cells[Grid.getTopIndex(col)][col]=color;
+		Power4Game.grid.cells[Grid.getTopIndex(col)][col]=color;
 		Grid.setTopIndex(col, Grid.getTopIndex(col)-1);
-		System.out.println(this.grid);
+		System.out.println(Power4Game.grid);
 	}
 }

@@ -16,11 +16,14 @@ public class WindowPower4 implements Runnable
 	// Titre, dimensions (en pixel)
 	fenetre.setTitle("Power 4 ");
 	
-	fenetre.setSize(Grid.NUMBER_OF_COLUMNS*100, Grid.NUMBER_OF_LINES*100);
+	fenetre.setSize(Grid.NUMBER_OF_COLUMNS*100+100, Grid.NUMBER_OF_LINES*100+100);
 	
 	// Affichage de la fenêtre
 	fenetre.setVisible(true);
 	fenetre.setContentPane(new Panneau());
+	
+	
+	
 	
 	
 	}
