@@ -1,5 +1,7 @@
 package fr.iutvalence.info.m2103.project.p4;
 
+import javax.swing.SwingUtilities;
+
 // TODO write comment DONE
 // TODO move classes in a package (fr.iutvalence.info.m2103.project.p4) DONE
 
@@ -17,8 +19,10 @@ public class Main {
 	 */
 	public static void main(String[] args)
 	{
-		new Power4Game().play()	;
 		
+		SwingUtilities.invokeLater(new WindowPower4());
+		System.out.println("fin du main !");
+		//new Power4Game().play()	;
 	}
 
 }
