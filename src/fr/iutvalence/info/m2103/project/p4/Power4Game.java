@@ -23,7 +23,8 @@ public class Power4Game {
 	/**
 	 * Create a game of Puissance4
 	 **/
-	public Power4Game() {
+	public Power4Game() 
+	{
 		this.grid = new Grid();
 		Player player1=new Player(Cell.RED);
 		Player player2=new Player(Cell.YELLOW);
