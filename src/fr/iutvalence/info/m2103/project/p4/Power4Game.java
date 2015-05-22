@@ -38,14 +38,12 @@ public class Power4Game {
 	public void play() 
 	{	
 
-		System.out.println(new Grid());
-		System.out.println("The Red begin");
+		new Grid();
 
 		for (int numberOfStroke=0;numberOfStroke<this.grid.NUMBER_OF_COLUMNS*this.grid.NUMBER_OF_LINES;numberOfStroke++)
 		{
 			
 			PutPawn(Cell.RED);
-			System.out.println(this.grid);
 			
 			if (Pawnalign.Search4Align())
 			{
@@ -53,7 +51,7 @@ public class Power4Game {
 				numberOfStroke=0;
 			}
 			PutPawn(Cell.YELLOW);
-			System.out.println(this.grid);
+			
 			if (Pawnalign.Search4Align())
 			{
 				Pawnalign.Win(Cell.YELLOW);
@@ -72,5 +70,6 @@ public class Power4Game {
 		int col= Player.chooseColumn();	
 		this.grid.cells[Grid.getTopIndex(col)][col]=color;
 		Grid.setTopIndex(col, Grid.getTopIndex(col)-1);
+		System.out.println(this.grid);
 	}
 }

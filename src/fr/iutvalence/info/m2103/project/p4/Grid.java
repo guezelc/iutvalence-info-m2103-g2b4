@@ -55,7 +55,8 @@ public class Grid
 			}
 			
 		}
-		
+		System.out.println(this);
+		System.out.println("The Red begin");
 	
 	}
 	// TODO rename method DONE
