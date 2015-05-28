@@ -13,16 +13,20 @@ public class Power4Game {
 	/**
 	 * create a field grid type of Grille
 	 */
-	private static Grid grid;
+	static Grid grid;
 	/**
 	 * create a field cells type of Cell
 	 */
-	private Cell[][] cells;
+	static Cell[][] cells;
 
 	// TODO fix comment DONE
 	/**
 	 * Create a game of Puissance4
 	 **/
+	
+	static int numberOfStroke = 0;
+	
+	
 	public Power4Game() 
 	{
 		this.grid = new Grid();
@@ -40,7 +44,7 @@ public class Power4Game {
 
 		new Grid();
 
-		for (int numberOfStroke=0;numberOfStroke<this.grid.NUMBER_OF_COLUMNS*this.grid.NUMBER_OF_LINES;numberOfStroke++)
+		for (;numberOfStroke<this.grid.NUMBER_OF_COLUMNS*this.grid.NUMBER_OF_LINES;numberOfStroke++)
 		{
 			
 			PutPawn(Cell.RED);

@@ -1,5 +1,6 @@
 package fr.iutvalence.info.m2103.project.p4;
 
+import java.awt.Color;
 import java.awt.Graphics;
 
 import javax.swing.JPanel;
@@ -8,12 +9,16 @@ import javax.swing.JPanel;
 
 public class Panneau extends JPanel { 
 
-  public void paintComponent(Graphics g){
+  public static Color color = Color.YELLOW;
+  public static int button= -1;
+
+
+public void paintComponent(Graphics g){
 
     //Créer une grille de puissance 4
 	// Test
 	  
-	  
+	
     g.setColor(java.awt.Color.blue);
     for (int i = 1 ; i <= Grid.NUMBER_OF_COLUMNS+1; i ++)
     {
@@ -35,26 +40,15 @@ public class Panneau extends JPanel {
     g.fillOval((Grid.NUMBER_OF_COLUMNS-1)*75+10, 75*(Grid.NUMBER_OF_LINES)+10, 60 ,60);
     g.fillOval((Grid.NUMBER_OF_COLUMNS-1)*75+10, 75*(Grid.NUMBER_OF_LINES-1)+10, 60 ,60);
     */
+    if(button>=0)
+    {
+    	g.setColor(color);    	 	
+    	g.fillOval((button+1)*75+10, 75*(Grid.getTopIndex(button)+1)+10, 60 ,60);
+    	Grid.setTopIndex(button, Grid.getTopIndex(button)-1);
+    }
+    
     
   }  
-  
-  
-  public static void Container(Cell color, Graphics g)
-  {
-	  int col = Player.chooseColumn();
-	  String colorpaint=null;
-	  if (color==Cell.RED)
-	  {
-		  colorpaint="RED";
-	  }
-	  if (color==Cell.YELLOW)
-	  {
-		  colorpaint="YELLOW";
-	  }
-	  g.setColor(java.awt.Color.getColor(colorpaint));
-	  g.fillOval((Grid.getTopIndex(col))*75+10, 75*(col)+10, 60 ,60);
-	  
-  }
   
 
 }

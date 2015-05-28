@@ -19,13 +19,14 @@ public class WindowPower4 extends JFrame implements Runnable
 	 static JButton button5 = new JButton("Col5");
 	 static JButton button6 = new JButton("Col6");
 	 static JButton button7 = new JButton("Col7");
-	
+	 static JFrame fenetre;
+		
 	public void run()
-	{
-	
-	// Création du composant graphique associé à la fenêtre
+	{		
+	// Création du composant graphique associé à la fenêtre	
 	// (à ce stade rien n'est affiché)
-	JFrame fenetre = new JFrame();
+		
+	fenetre = new JFrame();
 	
 	// Modification des propriétés de la fenêtre
 	// Titre, dimensions (en pixel)
@@ -47,6 +48,14 @@ public class WindowPower4 extends JFrame implements Runnable
 	button5.setPreferredSize(new Dimension(65, 30));
 	button6.setPreferredSize(new Dimension(65, 30));
 	button7.setPreferredSize(new Dimension(65, 30));
+	
+	button1.addActionListener(new ButtonListener());
+	button2.addActionListener(new ButtonListener());
+	button3.addActionListener(new ButtonListener());
+	button4.addActionListener(new ButtonListener());
+	button5.addActionListener(new ButtonListener());
+	button6.addActionListener(new ButtonListener());
+	button7.addActionListener(new ButtonListener());
 	
 	fenetre.add(button1);
 	fenetre.add(button2);
