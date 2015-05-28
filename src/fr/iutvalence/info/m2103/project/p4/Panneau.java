@@ -30,12 +30,19 @@ public void paintComponent(Graphics g)
     g.fillRect(75*(Grid.NUMBER_OF_COLUMNS+1), 75*(Grid.NUMBER_OF_LINES+1), 10, 10);
     
     
-    if(button>=0)
+    for(int count=0; count<Power4Game.grid.NUMBER_OF_COLUMNS*Power4Game.grid.NUMBER_OF_LINES; count++)
     {
-    	g.setColor(color);    	 	
-    	g.fillOval((button+1)*75+10, 75*(Grid.getTopIndex(button)+1)+10, 60 ,60);
-    	Grid.setTopIndex(button, Grid.getTopIndex(button)-1);
+    	int count_bis=1;
+    	if(button>=0)
+        {
+    		g.setColor(color);    	 	
+        	g.fillOval((button+1)*75+10, 75*(Grid.getTopIndex(button)+1)+10, 60 ,60);
+        	Grid.setTopIndex(button, Grid.getTopIndex(button)-1);
+        	Panneau.button=-1;
+        	
+        }
     }
+    
     
     
   }  

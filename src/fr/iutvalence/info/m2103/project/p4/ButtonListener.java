@@ -45,28 +45,61 @@ public class ButtonListener implements ActionListener
 		}
 		
 		
-		Cell colorDraw = null;
-		if (Panneau.color==Color.RED)
+		
+		
+		if ( Grid.getTopIndex(Panneau.button)+1>0)
 		{
-			colorDraw=Cell.RED;
+			Cell colorDraw = null;
+			if (Panneau.color==Color.RED)
+			{
+				colorDraw=Cell.RED;
+			}
+			if (Panneau.color==Color.YELLOW)
+			{
+				colorDraw=Cell.YELLOW;
+			}
+			
+			WindowPower4.fenetre.setBackground(Color.WHITE);
+			WindowPower4.fenetre.setBackground(Color.BLACK);
+			Power4Game.grid.cells[Grid.getTopIndex(Panneau.button)][Panneau.button]=colorDraw;
+			System.out.println(Power4Game.grid);
+			
+			if (Pawnalign.Search4Align())
+			{
+				if (colorDraw ==Cell.RED)
+				{
+					Pawnalign.Win(Cell.RED);
+					Power4Game.numberOfStroke=0;
+				}
+				if (colorDraw ==Cell.YELLOW)
+				{
+					Pawnalign.Win(Cell.YELLOW);
+					Power4Game.numberOfStroke=0;
+				}
+				
+				for(int numcolumn= 0 ; numcolumn < Grid.NUMBER_OF_COLUMNS;numcolumn++)
+				{
+					Grid.setTopIndex(numcolumn, Grid.NUMBER_OF_LINES-1);
+				}
+				
+			}
+			
+			
+			
+			
+			if (colorDraw==Cell.RED)
+			{
+				Panneau.color=Color.YELLOW;
+			}
+			if (colorDraw==Cell.YELLOW)
+			{
+				Panneau.color=Color.RED;
+			}
 		}
-		if (Panneau.color==Color.YELLOW)
+		else 
 		{
-			colorDraw=Cell.YELLOW;
+			System.out.println("Column full, replay ! ");
 		}
 		
-		WindowPower4.fenetre.setBackground(Color.WHITE);
-		WindowPower4.fenetre.setBackground(Color.BLACK);
-		Power4Game.grid.cells[Grid.getTopIndex(Panneau.button)][Panneau.button]=colorDraw;
-		System.out.println(Power4Game.grid);
-		
-		if (colorDraw==Cell.RED)
-		{
-			Panneau.color=Color.YELLOW;
-		}
-		if (colorDraw==Cell.YELLOW)
-		{
-			Panneau.color=Color.RED;
-		}
 	}
 }
