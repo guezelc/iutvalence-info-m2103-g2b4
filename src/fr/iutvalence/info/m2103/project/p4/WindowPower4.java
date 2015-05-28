@@ -40,7 +40,6 @@ public class WindowPower4 extends JFrame implements Runnable
 	fenetre.setBackground(Color.BLACK);
 	
 	
-	
 	button1.setPreferredSize(new Dimension(65, 30));
 	button2.setPreferredSize(new Dimension(65, 30));
 	button3.setPreferredSize(new Dimension(65, 30));

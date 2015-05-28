@@ -8,6 +8,7 @@ public class TraitmentButton1 implements   ActionListener
 {
 	public void actionPerformed (ActionEvent e)
 	{
+		
 		Cell colorDraw = null;
 		if (Panneau.color==Color.RED)
 		{

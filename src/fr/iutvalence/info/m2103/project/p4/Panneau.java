@@ -13,12 +13,10 @@ public class Panneau extends JPanel {
   public static int button= -1;
 
 
-public void paintComponent(Graphics g){
+public void paintComponent(Graphics g)
+{
 
-    //Créer une grille de puissance 4
-	// Test
-	  
-	
+   	
     g.setColor(java.awt.Color.blue);
     for (int i = 1 ; i <= Grid.NUMBER_OF_COLUMNS+1; i ++)
     {
@@ -31,15 +29,7 @@ public void paintComponent(Graphics g){
     
     g.fillRect(75*(Grid.NUMBER_OF_COLUMNS+1), 75*(Grid.NUMBER_OF_LINES+1), 10, 10);
     
-    /*
-     * position de pion de Puissance 4 
-     * Test
-     *
-    g.setColor(java.awt.Color.red);
-    g.fillOval((Grid.NUMBER_OF_COLUMNS)*75+10, 75*(Grid.NUMBER_OF_LINES)+10, 60 ,60);
-    g.fillOval((Grid.NUMBER_OF_COLUMNS-1)*75+10, 75*(Grid.NUMBER_OF_LINES)+10, 60 ,60);
-    g.fillOval((Grid.NUMBER_OF_COLUMNS-1)*75+10, 75*(Grid.NUMBER_OF_LINES-1)+10, 60 ,60);
-    */
+    
     if(button>=0)
     {
     	g.setColor(color);    	 	

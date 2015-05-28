@@ -59,6 +59,7 @@ public class ButtonListener implements ActionListener
 		WindowPower4.fenetre.setBackground(Color.BLACK);
 		Power4Game.grid.cells[Grid.getTopIndex(Panneau.button)][Panneau.button]=colorDraw;
 		System.out.println(Power4Game.grid);
+		
 		if (colorDraw==Cell.RED)
 		{
 			Panneau.color=Color.YELLOW;

@@ -23,6 +23,7 @@ public class Main {
 		SwingUtilities.invokeLater(new WindowPower4());
 		System.out.println("fin du main !");
 		new Power4Game().play()	;
+		
 	}
 
 }

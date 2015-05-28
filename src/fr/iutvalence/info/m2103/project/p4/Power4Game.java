@@ -24,8 +24,7 @@ public class Power4Game {
 	 * Create a game of Puissance4
 	 **/
 	
-	static int numberOfStroke = 0;
-	
+	static int numberOfStroke = 0;	
 	
 	public Power4Game() 
 	{
