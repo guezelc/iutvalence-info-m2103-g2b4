@@ -12,13 +12,13 @@ import java.awt.Graphics;
 public class WindowPower4 extends JFrame implements Runnable 
 {
 	
-	private JButton button1 = new JButton("Col1");
-	private JButton button2 = new JButton("Col2");
-	private JButton button3 = new JButton("Col3");
-	private JButton button4 = new JButton("Col4");
-	private JButton button5 = new JButton("Col5");
-	private JButton button6 = new JButton("Col6");
-	private JButton button7 = new JButton("Col7");
+	 static JButton button1 = new JButton("Col1");
+	 static JButton button2 = new JButton("Col2");
+	 static JButton button3 = new JButton("Col3");
+	 static JButton button4 = new JButton("Col4");
+	 static JButton button5 = new JButton("Col5");
+	 static JButton button6 = new JButton("Col6");
+	 static JButton button7 = new JButton("Col7");
 	
 	public void run()
 	{

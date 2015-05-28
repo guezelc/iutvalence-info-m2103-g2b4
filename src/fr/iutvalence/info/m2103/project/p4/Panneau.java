@@ -29,7 +29,7 @@ public class Panneau extends JPanel {
     /*
      * position de pion de Puissance 4 
      * Test
-     * 
+     *
     g.setColor(java.awt.Color.red);
     g.fillOval((Grid.NUMBER_OF_COLUMNS)*75+10, 75*(Grid.NUMBER_OF_LINES)+10, 60 ,60);
     g.fillOval((Grid.NUMBER_OF_COLUMNS-1)*75+10, 75*(Grid.NUMBER_OF_LINES)+10, 60 ,60);
@@ -38,7 +38,7 @@ public class Panneau extends JPanel {
     
   }  
   
-  /*
+  
   public static void Container(Cell color, Graphics g)
   {
 	  int col = Player.chooseColumn();
@@ -55,6 +55,6 @@ public class Panneau extends JPanel {
 	  g.fillOval((Grid.getTopIndex(col))*75+10, 75*(col)+10, 60 ,60);
 	  
   }
-  */
+  
 
 }
